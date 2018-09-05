@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Team {
     public String name, location;
-    public Hashtable roster;
+    public ArrayList roster;
 
     public boolean addPlayer(Player person) {
         if (roster.size() > 6) {
@@ -20,20 +20,19 @@ public class Team {
         return true;
     }
 
+    public String toString() {
+        return location + " " + name + ": " + roster;
+    }
+
     public Team(String name, String location) {
         this.name = name;
         this.location = location;
-        this.roster = new Hashtable<String, Player>(7);
+        this.roster = new ArrayList<Player>(7);
     }
 
     public Team(String name, String location, Player[] roster) {
         this.name = name;
         this.location = location;
-        if (roster.length < 8) {
-
-        }
-        else {
-            this.roster = new Hashtable<String, Player>(7);
-        }
+        this.roster = new ArrayList<Player>(Arrays.asList(roster));
     }
 }

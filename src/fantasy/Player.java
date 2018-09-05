@@ -1,5 +1,6 @@
 package fantasy;
 
+
 public class Player {
     public enum Position {QB, RB, WR, FLEX, FLEXS}
     
@@ -9,6 +10,10 @@ public class Player {
 
     public double getBMI() {
         return (double) height / weight;
+    }
+
+    public String toString() {
+        return position + ": " + name;
     }
 
     public Player(String name, int height, int weight, Position position) {
