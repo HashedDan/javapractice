@@ -17,6 +17,7 @@ public class QuickSort {
 
     private int partition(int low, int high) {
         // TODO
+        return 1;
     }
 
     private static void swap(int a, int b) {

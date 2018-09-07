@@ -3,6 +3,7 @@ import java.util.Arrays;
 import sort.*;
 
 public class Sort {
+
     public static void main(String[] args) {
         int[] mData = {7, 1, 22, 6, 4, 19};
 
@@ -10,7 +11,7 @@ public class Sort {
         mSorter.sort();
         System.out.println(Arrays.toString(mData));
 
-        int[] qData = {7, 1, 22, 6, 4, 19};
+        int[] qData = {10, 1, 7, 6, 5, 4};
 
         QuickSort qSorter = new QuickSort(qData);
         qSorter.sort();
